@@ -1,41 +1,41 @@
-class digit {
-  constructor() {
-
+class Digit {
+  constructor(start) {
+    this.start = start;
   }
 
-  sevenSegment(val, start) {
+  sevenSegment(val) {
     noStroke();
     noFill();
     // A
     fill(this.getColor(val, 6));
-    rect(60 + start, 40, 78, 18, 10, 10);
+    rect(60 + this.start, 40, 78, 18, 10, 10);
     // B
     fill(this.getColor(val, 5));
-    rect(140 + start, 60, 18, 98, 10, 10);
+    rect(140 + this.start, 60, 18, 98, 10, 10);
     // C
     fill(this.getColor(val, 4));
-    rect(140 + start, 180, 18, 98, 10, 10);
+    rect(140 + this.start, 180, 18, 98, 10, 10);
     // D
     fill(this.getColor(val, 3));
-    rect(60 + start, 280, 78, 18, 10, 10);
+    rect(60 + this.start, 280, 78, 18, 10, 10);
     // E
     fill(this.getColor(val, 2));
-    rect(40 + start, 180, 18, 98, 10, 10);
+    rect(40 + this.start, 180, 18, 98, 10, 10);
     // F
     fill(this.getColor(val, 1));
-    rect(40 + start, 60, 18, 98, 10, 10);
+    rect(40 + this.start, 60, 18, 98, 10, 10);
     // A
     fill(this.getColor(val, 0));
-    rect(60 + start, 160, 78, 18, 10, 10);
+    rect(60 + this.start, 160, 78, 18, 10, 10);
   }
   
-  twoSegment(start, col) {
+  seperator(col) {
     noStroke();
     noFill();
     
     fill(this.getColor(1, col));
-    circle(start*1.35, 110, 10);
-    circle(start*1.35, 230, 10);
+    circle(this.start*1.35, 110, 10);
+    circle(this.start*1.35, 230, 10);
   }
 
   getColor(val, shift) {
